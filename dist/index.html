@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie-film stuff!</title>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="styles/style.css"/>
+</head>
+<body>
+
+<main>
+    
+<!-- NAV -->
+    <center><h1>IMBD?</h1>
+    <h5> Internet Movie Beta Dase</h5>
+    </center>
+
+        <ul class="nav nav-tabs">
+              <li role="presentation" class="active"><a href="#home">Home</a></li>
+              <li role="presentation"><a href="#search">Search Results</a></li>
+              <li role="presentation"><a href="#watchList">Watch List</a></li>
+        </ul>
+
+<!-- HOME -->
+    <div class="container">
+        <div class = "row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+                <section class="page" id="home">
+                    <p>Search for a movie below:</p>
+                        <form id="search-form">
+                            <input type="text" id="query">
+                            <button type="submit" id="searchbutton">Search</button>
+                        </form>
+                </section>
+            </div>
+        </div>
+    </div>
+
+<!-- SEARCH PAGE -->
+    <div class="container">
+       <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <section class="page" id="search">
+                    <h1>Search Results</h1>
+                    <h3></h3>
+                    <button type="submit" id="go-back">Back</button>
+                    <div id="display-results"></div>
+                    <div id="toWatch"></div>
+                </section>  
+            <div>      
+        </div>
+     </div>
+
+<!-- WATCH LIST -->
+     <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <section class="page" id="watchList">
+                    <h2>Necessary films to watch:</h2>
+                    <div id="myWatchList"></div>
+                     <button type="submit" id="clear">Clear List</button>
+                </section>
+            </div>
+        </div>
+     </div>
+
+</main> 
+
+<script type="text/template" id="movieTemplate">
+    <div class="movieTemplate">
+        <div><%= Title %>
+        <%= ":" %>
+        <%= Year %></div>
+    </div>
+</script>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/underscore/underscore-min.js"></script>
+<script type="text/javascript" src="bower_components/backbone/backbone-min.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
+
