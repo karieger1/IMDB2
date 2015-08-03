@@ -14,15 +14,13 @@ $(document).ready(function() {
 		home: function() {
 			$(".page").hide();
 			$("#home").show();
-			$("#searchbutton").on("click", function(e) {
-				myRouter.navigate("results/"+query, {trigger: true});
-			});
 			
 		},
 
 		results: function(query) {
 			$(".page").hide();
 			$("#results").show();
+
 				$.get(
 				"http://www.omdbapi.com/?",
 				{
@@ -46,6 +44,7 @@ $(document).ready(function() {
 				$(".movieTemplate").on("click", function(e) {
 					var $added = ($(e.target)).clone();
 					watchList.push($added);
+					console.log(watchList);
 					$("#toWatch").append($added);
 				});
 			}

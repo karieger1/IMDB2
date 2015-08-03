@@ -3,5 +3,14 @@
 }
 
 .movieTemplate:hover {
-	cursor: hand;
+	cursor: pointer;
+}
+
+#go-back {
+	margin-top: 2em;
+}
+
+.movieTemplate {
+	border: 1px solid black;
+	padding:.5em;
 }
